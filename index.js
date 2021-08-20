@@ -1,3 +1,5 @@
+//412. Fizz Buzz
+
 let fizzBuzz = function (n) {
   let result = [];
   for (let i = 1; i <= n; i++) {
@@ -17,8 +19,7 @@ let fizzBuzz = function (n) {
 };
 fizzBuzz(4);
 
-//============================================
-// Two Sum
+// 1. Two Sum =====================================
 var twoSum = function (nums, target) {
   let result = [];
   let n = nums.length;
@@ -35,7 +36,7 @@ var twoSum = function (nums, target) {
 };
 twoSum([1, 4, 5, 8, 9], 14);
 
-//Reverse Integer============================================
+// 7. Reverse Integer===================================
 let reverseInt = function (x) {
   let reversed = Math.abs(x).toString().split("").reverse().join("");
   console.log(reversed);
@@ -43,7 +44,7 @@ let reverseInt = function (x) {
 };
 console.log(reverseInt(-578));
 
-//Length of Last Word==========================================
+//58. Length of Last Word================================
 // Input: s = "Hello World"
 // Output: 5
 // Explanation: The last word is "World" with length 5.
