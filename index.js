@@ -94,7 +94,7 @@ let getToday = function (year, month, day) {
 };
 console.log(getToday(2021, 8, 21));
 
-//
+//9. Palindrome Number
 let isPalindrome = function (x) {
   let x1 = x.toString().split("").reverse().join("");
   return x == x1;
@@ -149,3 +149,10 @@ let mProfit = function (prices) {
 };
 
 console.log(mProfit([7, 6, 4, 3, 4]));
+
+// 1389. Create Target Array in the Given Order
+var createTargetArray = function (nums, index) {
+  return index.reduce((acc, el, idx) => {
+    return [...acc.slice(0, el), nums[idx], ...acc.slice(el)];
+  }, []);
+};
