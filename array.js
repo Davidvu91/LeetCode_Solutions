@@ -103,3 +103,15 @@ let getConcatenation2 = (nArr2) => {
   return [...nArr2, ...nArr2];
 };
 console.log(getConcatenation2([1, 3, 2, 1]));
+
+// 1480. Running Sum of 1d Array====================================
+// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+// Return the running sum of nums.
+let runningSum = function (nums) {
+  let ans = [];
+  ans[0] = nums[0];
+  for (let i = 1; i < nums.length; i++) ans[i] = ans[i - 1] + nums[i];
+  return ans;
+};
+
+console.log(runningSum([1, 1, 1, 1, 1]));
