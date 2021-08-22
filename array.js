@@ -96,5 +96,10 @@ let getConcatenation = (nArr) => {
   let nnArr = CopArr.concat(nArr);
   return nnArr;
 };
-
 console.log(getConcatenation([1, 3, 2, 1]));
+
+// Way 2:
+let getConcatenation2 = (nArr2) => {
+  return [...nArr2, ...nArr2];
+};
+console.log(getConcatenation2([1, 3, 2, 1]));
