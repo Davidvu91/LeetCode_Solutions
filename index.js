@@ -150,9 +150,23 @@ let mProfit = function (prices) {
 
 console.log(mProfit([7, 6, 4, 3, 4]));
 
-// 1389. Create Target Array in the Given Order
+// 1389. Create Target Array in the Given Orders
 var createTargetArray = function (nums, index) {
   return index.reduce((acc, el, idx) => {
     return [...acc.slice(0, el), nums[idx], ...acc.slice(el)];
   }, []);
 };
+
+// 1920. Build Array from Permutation
+// Given a zero-based permutation nums (0-indexed), build an array ans of the same length where ans[i] = nums[nums[i]] for each 0 <= i < nums.length and return it.
+
+let buildArray = function (perArr) {
+  let ansArray = [];
+  let n = perArr.length;
+  for (let i = 0; i < n; i++) {
+    ansArray.push(perArr[perArr[i]]);
+  }
+  return ansArray;
+};
+
+console.log(buildArray([0, 2, 1, 5, 3, 4]));
